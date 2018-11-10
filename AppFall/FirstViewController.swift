@@ -29,7 +29,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     {
         let ref: DatabaseReference
         ref = Database.database().reference()
-        ref.child("einkaufen").setValue("nein")
+        ref.child("einkaufen").setValue(0)
         UserDefaults.standard.set("NO", forKey: "BUYER")
         EndEinkaufen(title: "Einkauf beenden und Liste löschen", message: "Möchtest du die Liste löschen und den Einkauf beenden?")
         viewDidLoad()
@@ -156,7 +156,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         AI.addAction(UIAlertAction(title: "Hinzufügen", style: UIAlertAction.Style.default, handler: { (AIAdd) in
             if let textFields = AI.textFields {
                 let theTextFields = textFields as [UITextField]
-                let enteredText = theTextFields[0].text
+                var enteredText = theTextFields[0].text
                 let enteredAmount = theTextFields[1].text
                 let amount = Int(enteredAmount!)
                 if enteredText != "" && enteredAmount != "" {
@@ -182,6 +182,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                         print("Data saved successfully!")
                                     }
                                 }
+                            
+                            
                             })
                         }
                         else {
@@ -201,10 +203,10 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                 }
                             }
                         }
-                        AI.addAction(UIAlertAction(title: "Abbrechen", style: UIAlertAction.Style.default, handler: { (AIdismiss) in
-                            AI.dismiss(animated: true, completion: nil)
-                        }))
                     })
+                    AI.addAction(UIAlertAction(title: "Abbrechen", style: UIAlertAction.Style.default, handler: { (AIdismiss) in
+                        AI.dismiss(animated: true, completion: nil)
+                    }))
                     AI.dismiss(animated: true, completion: nil)
                 }
             }
