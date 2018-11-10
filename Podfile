@@ -10,7 +10,6 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 
-
   target 'AppFallTests' do
     inherit! :search_paths
     # Pods for testing

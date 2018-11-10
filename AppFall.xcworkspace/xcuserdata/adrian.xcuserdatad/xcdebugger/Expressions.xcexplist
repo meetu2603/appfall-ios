@@ -3,15 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "FirstViewController.viewDidLoad():FirstViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in FirstViewController.LoadData():FirstViewController.swift">
          <PersistentStrings>
             <PersistentString
+               value = "item[key]![&quot;Name&quot;]">
+            </PersistentString>
+            <PersistentString
                value = "item[&quot;Name&quot;]">
             </PersistentString>
+            <PersistentString
+               value = "item[key]!">
+            </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "FirstViewController.viewDidLoad():FirstViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
