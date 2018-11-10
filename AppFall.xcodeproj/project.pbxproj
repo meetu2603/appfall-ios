@@ -20,6 +20,7 @@
 		3A1BF65A2196C7B0000BFE6F /* AppFallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BF6592196C7B0000BFE6F /* AppFallUITests.swift */; };
 		3A317FA82196DA8200BEB268 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A317FA72196DA8200BEB268 /* GoogleService-Info.plist */; };
 		3A317FAA2196DC0900BEB268 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A317FA92196DC0900BEB268 /* LoginViewController.swift */; };
+		3A838F57219784280053A8C5 /* WholeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A838F56219784280053A8C5 /* WholeTabBarController.swift */; };
 		C9911443E6BAF1D32E1321A9 /* Pods_AppFall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6BAC668FBCBC9E3F77CDB32 /* Pods_AppFall.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		3A1BF65B2196C7B0000BFE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A317FA72196DA8200BEB268 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A317FA92196DC0900BEB268 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3A838F56219784280053A8C5 /* WholeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeTabBarController.swift; sourceTree = "<group>"; };
 		473328AE574569B9AF5F7FB8 /* Pods-AppFall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppFall/Pods-AppFall.debug.xcconfig"; sourceTree = "<group>"; };
 		4C1BEBB36C18EA6C55BD30ED /* Pods-AppFallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppFallTests/Pods-AppFallTests.release.xcconfig"; sourceTree = "<group>"; };
 		7ADBEF786E6876A3D8A62986 /* Pods_AppFallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppFallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				3A1BF6392196C7AB000BFE6F /* FirstViewController.swift */,
 				3A1BF63B2196C7AB000BFE6F /* SecondViewController.swift */,
 				3A1BF63D2196C7AB000BFE6F /* Main.storyboard */,
+				3A838F56219784280053A8C5 /* WholeTabBarController.swift */,
 				3A12CCB721974E7F00FDBB17 /* ProductTableViewController.swift */,
 				3A317FA92196DC0900BEB268 /* LoginViewController.swift */,
 				3A1BF6402196C7AF000BFE6F /* Assets.xcassets */,
@@ -413,6 +416,7 @@
 				3A317FAA2196DC0900BEB268 /* LoginViewController.swift in Sources */,
 				3A1BF63C2196C7AB000BFE6F /* SecondViewController.swift in Sources */,
 				3A1BF6382196C7AB000BFE6F /* AppDelegate.swift in Sources */,
+				3A838F57219784280053A8C5 /* WholeTabBarController.swift in Sources */,
 				3A1BF63A2196C7AB000BFE6F /* FirstViewController.swift in Sources */,
 				3A12CCB821974E7F00FDBB17 /* ProductTableViewController.swift in Sources */,
 			);
@@ -593,6 +597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8434KY9GR;
 				INFOPLIST_FILE = AppFall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,6 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8434KY9GR;
 				INFOPLIST_FILE = AppFall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

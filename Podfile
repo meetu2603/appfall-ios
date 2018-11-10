@@ -6,7 +6,7 @@ target 'AppFall' do
   use_frameworks!
 
   # Pods for AppFall
-pod 'Firebase/Core'
+pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 

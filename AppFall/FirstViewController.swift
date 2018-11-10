@@ -84,6 +84,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @objc func refresh(_ sender: Any) {
         // Call webservice here after reload tableview.
         LoadData()
+        self.ItemList.reloadData()
         refreshControl.endRefreshing()
     }
 
