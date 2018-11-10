@@ -21,7 +21,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     {
         let ref: DatabaseReference
         ref = Database.database().reference()
-        ref.child("einkaufen").setValue("ja")
+        ref.child("einkaufen").setValue(1)
         UserDefaults.standard.set("YES", forKey: "BUYER")
         viewDidLoad()
     }
@@ -34,6 +34,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         EndEinkaufen(title: "Einkauf beenden und Liste löschen", message: "Möchtest du die Liste löschen und den Einkauf beenden?")
         viewDidLoad()
     }
+    @IBOutlet weak var AddItemBtnOut: UIButton!
     @IBAction func AddItemBtn(_ sender: Any)
     {
         self.AddITEM(title: "Hinzufügen", message: "") //Alert w/ TextField and Button
@@ -98,13 +99,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         EinkaufBeendenOut.isEnabled = false
         let ref: DatabaseReference
         ref = Database.database().reference()
-        ref.child("einkaufen").observeSingleEvent(of: .value) { (EinkaufenAccessable) in
-            let EinkaufenAccess = EinkaufenAccessable.value as? String
-            if EinkaufenAccess == "ja" {
+        ref.child("einkaufen").observe(.value) { (EinkaufenAccessable) in
+            let EinkaufenAccess = EinkaufenAccessable.value as? Int
+            if EinkaufenAccess == 1 {
                 self.EinkaufenGehenOut.isEnabled = false
+                self.AddItemBtnOut.isEnabled = false
+                
             }
             else {
                 self.EinkaufenGehenOut.isEnabled = true
+                self.AddItemBtnOut.isEnabled = true
             }
             if UserDefaults.standard.string(forKey: "BUYER") == "YES" {
                 self.EinkaufBeendenOut.isEnabled = true
@@ -197,6 +201,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                                 }
                             }
                         }
+                        AI.addAction(UIAlertAction(title: "Abbrechen", style: UIAlertAction.Style.default, handler: { (AIdismiss) in
+                            AI.dismiss(animated: true, completion: nil)
+                        }))
                     })
                     AI.dismiss(animated: true, completion: nil)
                 }
